@@ -1,25 +1,73 @@
+:root {
+  --clr-darkBlue: #28293c;
+  --clr-bg: #373850;
+  --clr-white: #d8d9ee;
+  --clr-orange: #f16e50;
+  --clr-green: #027b58;
+  --clr-yellow: #ffc55a;
+  --clr-blue: #aad3ff;
+}
+
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Fuzzy Bubbles", cursive;
+  background-color: var(--clr-blue);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section {
   text-align: center;
 }
 
+.game--title {
+  color: var(--clr-green);
+  font-size: 30px;
+  font-weight: bolder;
+}
+
 .game--container {
   display: grid;
   grid-template-columns: repeat(3, auto);
   width: 306px;
-  margin: 50px auto;
+  margin: 25px auto;
+  gap: 8px;
 }
 
 .cell {
   font-family: "Permanent Marker", cursive;
   width: 100px;
   height: 100px;
-  box-shadow: 0 0 0 1px #333333;
-  border: 1px solid #333333;
+  box-shadow: 0 0 0 2px --clr-blue;
+  border: 1px solid var(--clr-blue);
+  background-color: var(--clr-white);
   cursor: pointer;
   line-height: 100px;
   font-size: 60px;
+  color: var(--clr-orange);
+  border-radius: 15px;
+}
+
+.game--status {
+  color: var(--clr-green);
+}
+
+.game--restart {
+  background-color: var(--clr-orange);
+  border: none;
+  padding: 0.96rem 1.5rem;
+  border-radius: 15px;
+  color: var(--clr-white);
+  font-family: "Permanent Marker", cursive;
+  font-weight: bolder;
+  font-size: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.game--restart:hover {
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  cursor: pointer;
+  transform: translateY(-4px);
 }

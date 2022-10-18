@@ -24,6 +24,7 @@ const winningConditions = [
 function handleCellPlayed(clickedCell, clickedCellIndex) {
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
+    //
 }
 
 function handlePlayerChange() {
@@ -70,7 +71,6 @@ function handleCellClick(clickedCellEvent) {
     if (gameState[clickedCellIndex] !== "" || !gameActive) {
         return;
     }
-
     handleCellPlayed(clickedCell, clickedCellIndex);
     handleResultValidation();
 }
